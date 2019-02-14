@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_owner"
+            android:icon="@drawable/ic_close"
+            android:title="Владелец" />
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@drawable/ic_close"
+            android:title="Покупатель" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info"
+            android:title="Информация" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Настройки" />
+    </group>
+
+    <item android:title="Владелец">
+        <menu>
+            <item
+                android:id="@+id/nav_main"
+                android:icon="@drawable/ic_close"
+                android:title="Главная" />
+            <item
+                android:id="@+id/nav_bills"
+                android:icon="@drawable/ic_close"
+                android:title="Мои счета" />
+            <item
+                android:id="@+id/nav_adboard"
+                android:icon="@drawable/ic_close"
+                android:title="Объявления" />
+            <item
+                android:id="@+id/nav_premium"
+                android:icon="@drawable/ic_close"
+                android:title="Premium" />
+            <item
+                android:id="@+id/nav_kck"
+                android:icon="@drawable/ic_close"
+                android:title="Услуги кск" />
+        </menu>
+    </item>
+
+</menu>
