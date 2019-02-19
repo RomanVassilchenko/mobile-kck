@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
+    android:background="@color/colorWhite"
     android:layout_height="match_parent">
 
     <TextView
@@ -27,49 +28,57 @@
         android:id="@+id/billsbutton"
         android:layout_width="120sp"
         android:layout_height="120sp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.614"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/ic_main_bills" />
 
     <ImageButton
         android:id="@+id/premiumbutton"
         android:layout_width="120sp"
         android:layout_height="120sp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.866"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/ic_main_premium" />
 
     <ImageButton
         android:id="@+id/kckbutton"
         android:layout_width="120sp"
         android:layout_height="120sp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.867"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/ic_main_kck" />
 
     <ImageButton
         android:id="@+id/adboardbutton"
         android:layout_width="120sp"
         android:layout_height="120sp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.613"
-        app:srcCompat="@drawable/ic_close" />
+        app:srcCompat="@drawable/ic_main_adboard" />
 
     <TextView
         android:id="@+id/textView2"
