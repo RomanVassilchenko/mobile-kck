@@ -44,6 +44,12 @@
                 android:id="@+id/nav_kck"
                 android:icon="@drawable/ic_close"
                 android:title="Услуги кск" />
+
+            <item
+                android:id="@+id/nav_admin"
+                android:icon="@drawable/ic_close"
+                android:title="Admin Menu" />
+
         </menu>
     </item>
 
