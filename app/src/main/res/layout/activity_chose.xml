@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ChoseActivity">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginBottom="147dp"
+        android:text="Зайти как"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buyerbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buyerbtn"
+        android:layout_width="175sp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/ownerbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ownerbtn"
+        app:srcCompat="@drawable/ic_buyer" />
+
+    <ImageButton
+        android:id="@+id/ownerbtn"
+        android:layout_width="175sp"
+        android:layout_height="175sp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="312dp"
+        android:backgroundTint="@android:color/white"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_owner" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Покупатель"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/buyerbtn"
+        app:layout_constraintTop_toBottomOf="@+id/buyerbtn" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Владелец"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="@+id/ownerbtn"
+        app:layout_constraintTop_toBottomOf="@+id/ownerbtn" />
+</android.support.constraint.ConstraintLayout>
