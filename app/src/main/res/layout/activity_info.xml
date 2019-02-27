@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".InfoActivity">
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Информация о компании"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="379dp"
+        android:layout_height="341dp"
+        android:text="BAZIS-A – крупнейшая строительная организация и застройщик Казахстана, работает на строительном рынке с 1991 года и имеет высочайшую репутацию лидера строительной индустрии Казахстана.За 27 лет деятельности BAZIS-A возведено более 11 500 000 м2 жилых и административных зданий, более 3 000 000 м2 объектов социального и инфраструктурного назначения, построено сотни километров автомобильных и железных дорог. Ежегодно мы сдаем в эксплуатацию 350 000-400 000 м2 зданий различного назначения."
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169"
+        tools:text="BAZIS-A – крупнейшая строительная организация и застройщик Казахстана, работает на строительном рынке с 1991 года и имеет высочайшую репутацию лидера строительной индустрии Казахстана.\nЗа 27 лет деятельности BAZIS-A возведено более 11 500 000 м2 жилых и административных зданий, более 3 000 000 м2 объектов социального и инфраструктурного назначения, построено сотни километров автомобильных и железных дорог. Ежегодно мы сдаем в эксплуатацию 350 000-400 000 м2 зданий различного назначения." />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="164dp"
+        android:layout_height="132dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67"
+        app:srcCompat="@drawable/ic_color_firstinfo" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684"
+        app:srcCompat="@drawable/ic_color_secondinfo" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="360dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/ic_color_thirdinfo" />
+
+</android.support.constraint.ConstraintLayout>

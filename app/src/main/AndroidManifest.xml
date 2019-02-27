@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".OwnerLoginActivity"
+            android:name=".InfoActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".OwnerLoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ChoseActivity"
             android:theme="@style/AppTheme.NoActionBar">
