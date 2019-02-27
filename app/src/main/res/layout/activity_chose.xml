@@ -15,7 +15,7 @@
         android:layout_marginBottom="147dp"
         android:text="Зайти как"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buyerbtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,10 +51,10 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Покупатель"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/buyerbtn"
         app:layout_constraintTop_toBottomOf="@+id/buyerbtn" />
 
@@ -62,10 +62,10 @@
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:text="Владелец"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/ownerbtn"
         app:layout_constraintTop_toBottomOf="@+id/ownerbtn" />
 </android.support.constraint.ConstraintLayout>
