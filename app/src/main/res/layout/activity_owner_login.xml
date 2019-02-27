@@ -23,7 +23,7 @@
         tools:text="Готовы\nНачать?" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/notification"
         android:layout_width="85dp"
         android:layout_height="84dp"
         android:background="@android:color/white"
@@ -33,7 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.177"
-        app:srcCompat="@drawable/ic_notification" />
+        app:srcCompat="@drawable/ic_color_notification" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.378"
-        app:srcCompat="@drawable/ic_sometext" />
+        app:srcCompat="@drawable/ic_color_text" />
 
     <TextView
         android:id="@+id/textView27"
@@ -104,5 +104,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.788"
-        app:srcCompat="@drawable/ic_ok" />
+        app:srcCompat="@drawable/ic_color_ok" />
 </android.support.constraint.ConstraintLayout>

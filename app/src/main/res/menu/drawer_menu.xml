@@ -6,19 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_owner"
-            android:icon="@drawable/ic_nav_owner"
+            android:icon="@drawable/ic_black_owner"
             android:title="Владелец" />
         <item
             android:id="@+id/nav_customer"
-            android:icon="@drawable/ic_nav_buyer"
+            android:icon="@drawable/ic_black_buyer"
             android:title="Покупатель" />
         <item
             android:id="@+id/nav_info"
-            android:icon="@drawable/ic_info"
+            android:icon="@drawable/ic_black_info"
             android:title="Информация" />
         <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_settings"
+            android:icon="@drawable/ic_black_settings"
             android:title="Настройки" />
     </group>
 
@@ -26,28 +26,28 @@
         <menu>
             <item
                 android:id="@+id/nav_main"
-                android:icon="@drawable/ic_home"
+                android:icon="@drawable/ic_black_home"
                 android:title="Главная" />
             <item
                 android:id="@+id/nav_bills"
-                android:icon="@drawable/ic_bills"
+                android:icon="@drawable/ic_black_bills"
                 android:title="Мои счета" />
             <item
                 android:id="@+id/nav_adboard"
-                android:icon="@drawable/ic_adboard"
+                android:icon="@drawable/ic_black_adboard"
                 android:title="Объявления" />
             <item
                 android:id="@+id/nav_premium"
-                android:icon="@drawable/ic_premium"
+                android:icon="@drawable/ic_black_premium"
                 android:title="Premium" />
             <item
                 android:id="@+id/nav_kck"
-                android:icon="@drawable/ic_kck"
+                android:icon="@drawable/ic_black_kck"
                 android:title="Услуги кск" />
 
             <item
                 android:id="@+id/nav_admin"
-                android:icon="@drawable/ic_admin"
+                android:icon="@drawable/ic_black_admin"
                 android:title="Admin Menu" />
 
         </menu>
