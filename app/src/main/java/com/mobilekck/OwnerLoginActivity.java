@@ -26,13 +26,8 @@ public class OwnerLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (iin.length() == 12) {
-                    if (iin.getText().toString() == "678876678123") {
-                        Intent intent = new Intent(OwnerLoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    } else {
-                        Toast toast = Toast.makeText(getApplicationContext(), "Данного ИИН нет в базе данных. Пожалуйста повторите еще раз!", Toast.LENGTH_LONG);
-                        toast.show();
-                    }
+                    Intent intent = new Intent(OwnerLoginActivity.this, MainActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Неверный ИИН. Пожалуйста повторите еще раз!", Toast.LENGTH_LONG);
                     toast.show();

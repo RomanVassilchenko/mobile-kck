@@ -19,9 +19,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buyerbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/buyerbtn"
@@ -33,6 +33,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/ownerbtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ownerbtn"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_color_buyer" />
 
     <ImageButton
@@ -40,7 +41,7 @@
         android:layout_width="175sp"
         android:layout_height="175sp"
         android:layout_marginStart="220dp"
-        android:layout_marginBottom="312dp"
+        android:layout_marginBottom="240dp"
         android:backgroundTint="@android:color/white"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,8 +52,8 @@
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:text="Покупатель"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/buyerbtn"
@@ -63,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="Владелец"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/ownerbtn"

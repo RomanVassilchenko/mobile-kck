@@ -9,9 +9,11 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round" />
+        android:layout_width="187dp"
+        android:layout_height="85dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_color_avatar" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Иван Иванов"
+        android:text="Григорьев Тимофей Борисович"
 
         android:textColor="@color/colorWhite"
         android:textSize="15sp"

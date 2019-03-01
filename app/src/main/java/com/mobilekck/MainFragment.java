@@ -1,12 +1,11 @@
 package com.mobilekck;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 public class MainFragment extends Fragment {
@@ -16,17 +15,17 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        ImageButton billsbutton = (ImageButton) view.findViewById(R.id.billsbutton);
-        ImageButton adboardbutton = (ImageButton) view.findViewById(R.id.adboardbutton);
-        ImageButton premiumbutton = (ImageButton) view.findViewById(R.id.premiumbutton);
-        ImageButton kckbutton = (ImageButton) view.findViewById(R.id.kckbutton);
+        ImageButton billsbutton = view.findViewById(R.id.billsbutton);
+        ImageButton adboardbutton = view.findViewById(R.id.adboardbutton);
+        ImageButton premiumbutton = view.findViewById(R.id.premiumbutton);
+        ImageButton kckbutton = view.findViewById(R.id.kckbutton);
 
         billsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment newFragment = new BillsFragment(); //YourFragment заменить на нужный
+                Fragment newFragment = new BillsFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, newFragment); //fragment_container заменить на Ваш id контейнера
+                transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
         });
@@ -34,9 +33,9 @@ public class MainFragment extends Fragment {
         adboardbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment newFragment = new AdBoardFragment(); //YourFragment заменить на нужный
+                Fragment newFragment = new AdBoardFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, newFragment); //fragment_container заменить на Ваш id контейнера
+                transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
         });
@@ -44,9 +43,9 @@ public class MainFragment extends Fragment {
         premiumbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment newFragment = new PremiumFragment(); //YourFragment заменить на нужный
+                Fragment newFragment = new PremiumFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, newFragment); //fragment_container заменить на Ваш id контейнера
+                transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
         });
@@ -54,9 +53,9 @@ public class MainFragment extends Fragment {
         kckbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment newFragment = new KCKFragment(); //YourFragment заменить на нужный
+                Fragment newFragment = new KCKFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container, newFragment); //fragment_container заменить на Ваш id контейнера
+                transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
         });
