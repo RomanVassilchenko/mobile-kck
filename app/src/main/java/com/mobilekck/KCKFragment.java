@@ -22,6 +22,8 @@ public class KCKFragment extends Fragment {
         Button electricianbtn = view.findViewById(R.id.callelectrician);
         Button securitybtn = view.findViewById(R.id.callsecurity);
 
+        electricianbtn.setEnabled(false);
+
         plumberbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

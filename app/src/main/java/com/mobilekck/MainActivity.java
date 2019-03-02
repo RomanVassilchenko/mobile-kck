@@ -61,10 +61,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new KCKFragment()).commit();
                 break;
-            case R.id.nav_admin:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new AdminFragment()).commit();
-                break;
             case R.id.nav_info:
                 Intent intent = new Intent(MainActivity.this, InfoActivity.class);
                 startActivity(intent);
