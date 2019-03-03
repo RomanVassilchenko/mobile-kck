@@ -27,7 +27,7 @@ public class KCKFragment extends Fragment {
         plumberbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNo = "87759004626";
+                String phoneNo = "87789068908";
                 if (!TextUtils.isEmpty(phoneNo)) {
                     String dial = "tel:" + phoneNo;
                     startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
@@ -47,7 +47,7 @@ public class KCKFragment extends Fragment {
         securitybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNo = "87759004626";
+                String phoneNo = "87014369487";
                 if (!TextUtils.isEmpty(phoneNo)) {
                     String dial = "tel:" + phoneNo;
                     startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));

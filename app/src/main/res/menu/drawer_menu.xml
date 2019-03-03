@@ -5,13 +5,15 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_owner"
-            android:icon="@drawable/ic_black_owner"
-            android:title="Владелец" />
-        <item
             android:id="@+id/nav_buyer"
             android:icon="@drawable/ic_black_buyer"
             android:title="Покупатель" />
+
+        <item
+            android:id="@+id/nav_owner"
+            android:icon="@drawable/ic_black_owner"
+            android:title="Владелец" />
+
         <item
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_black_info"
