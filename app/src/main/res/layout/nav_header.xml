@@ -12,6 +12,7 @@
         android:layout_width="187dp"
         android:layout_height="85dp"
         android:scaleType="fitStart"
+        android:contentDescription="TODO"
         android:src="@drawable/ic_color_avatar" />
 
 

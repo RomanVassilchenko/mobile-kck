@@ -70,6 +70,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent intent2 = new Intent(MainActivity.this, ChoseActivity.class);
                 startActivity(intent2);
                 break;
+
+            case R.id.nav_admin:
+                Intent intent3 = new Intent(MainActivity.this, AdminMenu.class);
+                startActivity(intent3);
+                break;
         }
 
         drawer.closeDrawer(GravityCompat.START);

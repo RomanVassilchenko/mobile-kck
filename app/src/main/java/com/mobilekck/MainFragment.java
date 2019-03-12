@@ -1,6 +1,7 @@
 package com.mobilekck;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -8,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import java.util.Objects;
+
 public class MainFragment extends Fragment {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
@@ -24,7 +27,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment newFragment = new BillsFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                FragmentTransaction transaction = Objects.requireNonNull(getFragmentManager()).beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
@@ -34,7 +37,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment newFragment = new AdBoardFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                FragmentTransaction transaction = Objects.requireNonNull(getFragmentManager()).beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
@@ -44,7 +47,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment newFragment = new PremiumFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                FragmentTransaction transaction = Objects.requireNonNull(getFragmentManager()).beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }
@@ -54,7 +57,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment newFragment = new KCKFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                FragmentTransaction transaction = Objects.requireNonNull(getFragmentManager()).beginTransaction();
                 transaction.replace(R.id.fragment_container, newFragment);
                 transaction.commit();
             }

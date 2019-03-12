@@ -54,6 +54,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.224"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_bills" />
 
     <Button
@@ -82,6 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_black_town" />
 
     <ImageView
@@ -96,6 +98,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.732"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_black_bank" />
 
     <TextView

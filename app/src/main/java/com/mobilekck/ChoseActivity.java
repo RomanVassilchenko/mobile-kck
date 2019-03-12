@@ -9,15 +9,12 @@ import android.widget.Toast;
 
 public class ChoseActivity extends AppCompatActivity {
 
-    private ImageButton ownerbtn;
-    private ImageButton buyerbtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chose);
-        ownerbtn = findViewById(R.id.ownerbtn);
-        buyerbtn = findViewById(R.id.buyerbtn);
+        ImageButton ownerbtn = findViewById(R.id.ownerbtn);
+        ImageButton buyerbtn = findViewById(R.id.buyerbtn);
 
         ownerbtn.setOnClickListener(new View.OnClickListener() {
             @Override

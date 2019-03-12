@@ -33,6 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ownerbtn"
         app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_buyer" />
 
     <ImageButton
@@ -45,6 +46,7 @@
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_owner" />
 
     <TextView

@@ -76,6 +76,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.297"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_bills" />
 
     <ImageButton
@@ -90,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.615"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_premium" />
 
     <ImageButton
@@ -104,6 +106,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.626"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_kck" />
 
     <ImageButton
@@ -118,6 +121,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.297"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_adboard" />
 
     <TextView
@@ -186,7 +190,7 @@
         app:layout_constraintVertical_bias="0.857" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/adresstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/fira_sans_condensed"
@@ -211,6 +215,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.026"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_bazis" />
 
 </android.support.constraint.ConstraintLayout>

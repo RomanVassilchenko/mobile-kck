@@ -11,8 +11,6 @@ import android.widget.Toast;
 
 public class OwnerLoginActivity extends AppCompatActivity {
 
-    private ImageButton okbtn;
-    private Button notownerbtn;
     private EditText iin;
 
     @Override
@@ -20,8 +18,8 @@ public class OwnerLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_login);
         iin = findViewById(R.id.iinText);
-        okbtn = findViewById(R.id.okbtn);
-        notownerbtn = findViewById(R.id.notownerbtn);
+        ImageButton okbtn = findViewById(R.id.okbtn);
+        Button notownerbtn = findViewById(R.id.notownerbtn);
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

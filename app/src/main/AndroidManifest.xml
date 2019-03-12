@@ -9,9 +9,10 @@
         android:roundIcon="@drawable/ic_color_bazis"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AdminMenu"></activity>
         <activity
             android:name=".InfoActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OwnerLoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
