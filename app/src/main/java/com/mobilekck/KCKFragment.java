@@ -14,10 +14,18 @@ import android.widget.Button;
 
 public class KCKFragment extends Fragment {
 
+    String IIN, NAME, SURNAME, LASTNAME, ADRESS;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_kck, container, false);
+
+        IIN = ((MainActivity) getActivity()).getIIN();
+        NAME = ((MainActivity) getActivity()).getNAME();
+        SURNAME = ((MainActivity) getActivity()).getSURNAME();
+        LASTNAME = ((MainActivity) getActivity()).getLASTNAME();
+        ADRESS = ((MainActivity) getActivity()).getADRESS();
 
         Button plumberbtn = view.findViewById(R.id.callplumber);
         Button electricianbtn = view.findViewById(R.id.callelectrician);

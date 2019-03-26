@@ -21,6 +21,7 @@ public class ChoseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ChoseActivity.this, OwnerLoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         buyerbtn.setOnClickListener(new View.OnClickListener() {

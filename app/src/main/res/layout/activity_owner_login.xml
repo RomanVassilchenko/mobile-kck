@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".OwnerLoginActivity">
 
     <TextView
@@ -38,13 +39,13 @@
         android:layout_width="85dp"
         android:layout_height="85sp"
         android:background="@android:color/white"
+        android:contentDescription="TODO"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.193"
-        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_notification" />
 
     <ImageView
@@ -52,12 +53,12 @@
         android:layout_width="297dp"
         android:layout_height="187dp"
         android:background="@android:color/white"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.474"
-        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_text" />
 
     <TextView
@@ -81,6 +82,7 @@
         android:layout_height="70dp"
         android:ems="10"
         android:hint="Введите свой ИИН"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="12"
         android:textAlignment="center"
@@ -89,7 +91,6 @@
         app:layout_constraintHorizontal_bias="0.228"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no"
         app:layout_constraintVertical_bias="0.865" />
 
     <Button
@@ -113,6 +114,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/circle"
         android:backgroundTint="@android:color/white"
+        android:contentDescription="TODO"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,6 +122,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.867"
-        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_color_ok" />
 </android.support.constraint.ConstraintLayout>
