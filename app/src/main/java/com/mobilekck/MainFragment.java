@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Objects;
 
 public class MainFragment extends Fragment {
@@ -32,7 +34,6 @@ public class MainFragment extends Fragment {
 
         TextView adresstext = view.findViewById(R.id.adresstext);
         adresstext.setText(ADRESS);
-
 
         ImageButton billsbutton = view.findViewById(R.id.billsbutton);
         ImageButton adboardbutton = view.findViewById(R.id.adboardbutton);

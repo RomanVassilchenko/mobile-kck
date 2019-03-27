@@ -16,11 +16,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
 
-    String IIN, NAME, SURNAME, LASTNAME, ADRESS;
+    String IIN, NAME, SURNAME, LASTNAME, ADRESS, FULLNAME;
     DBHelper dbHelper;
 
     @Override
@@ -62,6 +63,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new MainFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_main);
+        }
+
+        try {
+            FULLNAME = NAME + ' ' + SURNAME + ' ' + LASTNAME;
+            TextView headerTitle = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_full_name);
+            headerTitle.setText(FULLNAME);
+            Log.e("FullName = ", FULLNAME);
+        } catch (Exception e) {
+            Log.e("FullName", "-1");
         }
     }
 
