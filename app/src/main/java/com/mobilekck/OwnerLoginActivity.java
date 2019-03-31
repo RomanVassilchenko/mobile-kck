@@ -46,6 +46,7 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                 String TextIIN = iin.getText().toString();
                 Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
 
+
                 if (cursor.moveToFirst()) {
                     int idIndex = cursor.getColumnIndex(DBHelper.KEY_ID);
                     int iinIndex = cursor.getColumnIndex(DBHelper.KEY_IIN);
@@ -53,6 +54,8 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                     int surnameIndex = cursor.getColumnIndex(DBHelper.KEY_SURNAME);
                     int lastnameIndex = cursor.getColumnIndex(DBHelper.KEY_LASTNAME);
                     int adressIndex = cursor.getColumnIndex(DBHelper.KEY_ADRESS);
+                    int walletIndex = cursor.getColumnIndex(DBHelper.KEY_WALLET);
+                    int billIndex = cursor.getColumnIndex(DBHelper.KEY_BILL);
 
                     do {
                         String DataIIN = (cursor.getString(iinIndex));
@@ -72,7 +75,9 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                                 ", name = " + cursor.getString(nameIndex) +
                                 ", surname = " + cursor.getString(surnameIndex) +
                                 ", lastname = " + cursor.getString(lastnameIndex) +
-                                ", adress = " + cursor.getString(adressIndex));
+                                ", adress = " + cursor.getString(adressIndex) +
+                                ", wallet = " + cursor.getString(adressIndex) +
+                                ", bill = " + cursor.getString(billIndex));
 
                     }
                     while (cursor.moveToNext());

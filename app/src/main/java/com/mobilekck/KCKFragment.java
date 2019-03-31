@@ -14,7 +14,7 @@ import android.widget.Button;
 
 public class KCKFragment extends Fragment {
 
-    String IIN, NAME, SURNAME, LASTNAME, ADRESS;
+    String IIN, NAME, SURNAME, LASTNAME, ADRESS, FULLNAME, WALLET, BILL;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -26,6 +26,8 @@ public class KCKFragment extends Fragment {
         SURNAME = ((MainActivity) getActivity()).getSURNAME();
         LASTNAME = ((MainActivity) getActivity()).getLASTNAME();
         ADRESS = ((MainActivity) getActivity()).getADRESS();
+        WALLET = ((MainActivity) getActivity()).getWALLET();
+        BILL = ((MainActivity) getActivity()).getBILL();
 
         Button plumberbtn = view.findViewById(R.id.callplumber);
         Button electricianbtn = view.findViewById(R.id.callelectrician);

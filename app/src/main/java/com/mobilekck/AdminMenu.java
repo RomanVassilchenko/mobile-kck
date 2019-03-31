@@ -13,7 +13,7 @@ import android.widget.EditText;
 public class AdminMenu extends AppCompatActivity implements View.OnClickListener {
 
     Button btnAdd, btnRead, btnClear, btnUpd, btnDel;
-    EditText etIIN, etName, etSurName, etLastName, etAdress, etId;
+    EditText etIIN, etName, etSurName, etLastName, etAdress, etId, etWallet, etBill;
     DBHelper dbHelper;
 
     @Override
@@ -28,10 +28,10 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         btnRead = findViewById(R.id.btnRead);
         btnRead.setOnClickListener(this);
 
-        btnUpd = (Button) findViewById(R.id.btnUpd);
+        btnUpd = findViewById(R.id.btnUpd);
         btnUpd.setOnClickListener(this);
 
-        btnDel = (Button) findViewById(R.id.btnDel);
+        btnDel = findViewById(R.id.btnDel);
         btnDel.setOnClickListener(this);
 
         btnClear = findViewById(R.id.btnClear);
@@ -42,7 +42,9 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         etSurName = findViewById(R.id.etSurname);
         etLastName = findViewById(R.id.etLastname);
         etAdress = findViewById(R.id.etAdress);
-        etId = (EditText) findViewById(R.id.etId);
+        etId = findViewById(R.id.etId);
+        etWallet = findViewById(R.id.etWallet);
+        etBill = findViewById(R.id.etBill);
 
         dbHelper = new DBHelper(this);
     }
@@ -55,6 +57,8 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
         String surname = etSurName.getText().toString();
         String lastname = etLastName.getText().toString();
         String adress = etAdress.getText().toString();
+        String wallet = etWallet.getText().toString();
+        String bill = etBill.getText().toString();
         String id = etId.getText().toString();
 
         SQLiteDatabase database = dbHelper.getWritableDatabase();
@@ -70,6 +74,8 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                 contentValues.put(DBHelper.KEY_SURNAME, surname);
                 contentValues.put(DBHelper.KEY_LASTNAME, lastname);
                 contentValues.put(DBHelper.KEY_ADRESS, adress);
+                contentValues.put(DBHelper.KEY_WALLET, wallet);
+                contentValues.put(DBHelper.KEY_BILL, bill);
 
 
                 database.insert(DBHelper.TABLE_CONTACTS, null, contentValues);
@@ -85,6 +91,8 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                     int surnameIndex = cursor.getColumnIndex(DBHelper.KEY_SURNAME);
                     int lastnameIndex = cursor.getColumnIndex(DBHelper.KEY_LASTNAME);
                     int adressIndex = cursor.getColumnIndex(DBHelper.KEY_ADRESS);
+                    int walletIndex = cursor.getColumnIndex(DBHelper.KEY_WALLET);
+                    int billIndex = cursor.getColumnIndex(DBHelper.KEY_BILL);
 
                     do {
                         if (!id.isEmpty()) {
@@ -102,6 +110,8 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                                 etSurName.setText(cursor.getString(surnameIndex));
                                 etLastName.setText(cursor.getString(lastnameIndex));
                                 etAdress.setText(cursor.getString(adressIndex));
+                                etWallet.setText(cursor.getString(walletIndex));
+                                etBill.setText(cursor.getString(billIndex));
                             }
 
                         }
@@ -110,7 +120,9 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                                 ", name = " + cursor.getString(nameIndex) +
                                 ", surname = " + cursor.getString(surnameIndex) +
                                 ", lastname = " + cursor.getString(lastnameIndex) +
-                                ", adress = " + cursor.getString(adressIndex));
+                                ", adress = " + cursor.getString(adressIndex) +
+                                ", wallet = " + cursor.getString(walletIndex) +
+                                ", bill = " + cursor.getString(billIndex));
 
 
                     } while (cursor.moveToNext());
@@ -135,6 +147,8 @@ public class AdminMenu extends AppCompatActivity implements View.OnClickListener
                 if (lastname != " " && lastname != "")
                     contentValues.put(DBHelper.KEY_LASTNAME, lastname);
                 if (adress != " " && adress != "") contentValues.put(DBHelper.KEY_ADRESS, adress);
+                if (wallet != " " && wallet != "") contentValues.put(DBHelper.KEY_WALLET, wallet);
+                if (bill != " " && bill != "") contentValues.put(DBHelper.KEY_BILL, bill);
                 int updCount = database.update(DBHelper.TABLE_CONTACTS, contentValues, DBHelper.KEY_ID + "= ?", new String[]{id});
 
                 Log.d("mLog", "updates rows count = " + updCount);

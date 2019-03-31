@@ -21,7 +21,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
 
-    String IIN, NAME, SURNAME, LASTNAME, ADRESS, FULLNAME;
+    String ID, IIN, NAME, SURNAME, LASTNAME, ADRESS, FULLNAME, WALLET, BILL;
     DBHelper dbHelper;
 
     @Override
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         try {
             FULLNAME = NAME + ' ' + SURNAME + ' ' + LASTNAME;
-            TextView headerTitle = (TextView) navigationView.getHeaderView(0).findViewById(R.id.nav_full_name);
+            TextView headerTitle = navigationView.getHeaderView(0).findViewById(R.id.nav_full_name);
             headerTitle.setText(FULLNAME);
             Log.e("FullName = ", FULLNAME);
         } catch (Exception e) {
@@ -87,16 +87,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             int surnameIndex = cursor.getColumnIndex(DBHelper.KEY_SURNAME);
             int lastnameIndex = cursor.getColumnIndex(DBHelper.KEY_LASTNAME);
             int adressIndex = cursor.getColumnIndex(DBHelper.KEY_ADRESS);
+            int walletIndex = cursor.getColumnIndex(DBHelper.KEY_WALLET);
+            int billIndex = cursor.getColumnIndex(DBHelper.KEY_BILL);
 
             do {
                 String DataIIN = (cursor.getString(iinIndex));
                 if (IIN.equals(DataIIN)) {
                     Log.e("DataIIN = IIN", "Found");
 
+                    ID = cursor.getString(idIndex);
                     NAME = cursor.getString(nameIndex);
                     SURNAME = cursor.getString(surnameIndex);
                     LASTNAME = cursor.getString(lastnameIndex);
                     ADRESS = cursor.getString(adressIndex);
+                    WALLET = cursor.getString(walletIndex);
+                    BILL = cursor.getString(billIndex);
 
                     cursor.close();
                     return;
@@ -107,7 +112,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         ", name = " + cursor.getString(nameIndex) +
                         ", surname = " + cursor.getString(surnameIndex) +
                         ", lastname = " + cursor.getString(lastnameIndex) +
-                        ", adress = " + cursor.getString(adressIndex));
+                        ", adress = " + cursor.getString(adressIndex) +
+                        ", wallet = " + cursor.getString(walletIndex) +
+                        ", bill = " + cursor.getString(billIndex));
 
             }
             while (cursor.moveToNext());
@@ -116,6 +123,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         cursor.close();
         return;
+    }
+
+    public void UpdateDB(String ID, String IIN, String NAME, String SURNAME, String LASTNAME, String ADRESS, String WALLET, String BILL) {
+
+        SQLiteDatabase database = dbHelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        if (ID.equalsIgnoreCase("")) {
+            return;
+        }
+        if (IIN != " " && IIN != "") contentValues.put(DBHelper.KEY_IIN, IIN);
+        if (NAME != " " && NAME != "") contentValues.put(DBHelper.KEY_NAME, NAME);
+        if (SURNAME != " " && SURNAME != "")
+            contentValues.put(DBHelper.KEY_SURNAME, SURNAME);
+        if (LASTNAME != " " && LASTNAME != "")
+            contentValues.put(DBHelper.KEY_LASTNAME, LASTNAME);
+        if (ADRESS != " " && ADRESS != "") contentValues.put(DBHelper.KEY_ADRESS, ADRESS);
+        if (WALLET != " " && WALLET != "") contentValues.put(DBHelper.KEY_WALLET, WALLET);
+        if (BILL != " " && BILL != "") contentValues.put(DBHelper.KEY_BILL, BILL);
+        int updCount = database.update(DBHelper.TABLE_CONTACTS, contentValues, DBHelper.KEY_ID + "= ?", new String[]{ID});
     }
 
     @Override
@@ -191,4 +218,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public String getADRESS() {
         return ADRESS;
     }
+
+    public String getWALLET() {
+        return WALLET;
+    }
+
+    public String getBILL() {
+        return BILL;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
 }

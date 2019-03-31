@@ -59,7 +59,7 @@
         app:srcCompat="@drawable/ic_color_bills" />
 
     <Button
-        android:id="@+id/paybills"
+        android:id="@+id/paybillsbtn"
         android:layout_width="144dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
@@ -67,10 +67,24 @@
         android:text="Оплатить"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintVertical_bias="0.853" />
+
+    <Button
+        android:id="@+id/addmoneybtn"
+        android:layout_width="144dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button"
+        android:text="Пополнить"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -84,7 +98,7 @@
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607"
+        app:layout_constraintVertical_bias="0.732"
         app:srcCompat="@drawable/ic_black_town" />
 
     <ImageView
@@ -99,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.034"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732"
+        app:layout_constraintVertical_bias="0.613"
         app:srcCompat="@drawable/ic_black_bank" />
 
     <TextView
@@ -135,7 +149,7 @@
         android:id="@+id/textView6"
         android:layout_width="161dp"
         android:layout_height="26dp"
-        android:text="Специалисты КСК"
+        android:text="Мой счет"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -150,7 +164,7 @@
         android:id="@+id/textView29"
         android:layout_width="161dp"
         android:layout_height="26dp"
-        android:text="Астана ЕРЦ"
+        android:text="Задолжность"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -165,81 +179,55 @@
         android:id="@+id/textView7"
         android:layout_width="159dp"
         android:layout_height="20dp"
-        android:text="Вызов Специалистов"
+        android:layout_marginStart="24dp"
+        android:text="Остаток на счету"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView28"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="159dp"
         android:layout_height="20dp"
+        android:layout_marginStart="24dp"
         android:text="Коммунальные услуги"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView28"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/pockettext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:text="3600"
+        android:text="3600 Тенге"
         android:textColor="#01DF3A"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintVertical_bias="0.611" />
 
     <TextView
-        android:id="@+id/textView31"
+        android:id="@+id/billstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
-        android:text="4450"
+        android:text="4450 Тенге"
         android:textColor="#FA5858"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Февраль, 2019"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Февраль, 2019"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.926"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.727" />
 
 
 </android.support.constraint.ConstraintLayout>

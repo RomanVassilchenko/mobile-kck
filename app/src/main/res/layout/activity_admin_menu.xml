@@ -45,10 +45,21 @@
         android:layout_height="wrap_content"
         android:hint="Adress"></EditText>
 
+    <EditText
+        android:id="@+id/etWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wallet"></EditText>
+
+    <EditText
+        android:id="@+id/etBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bill"></EditText>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
 
 
         <Button
