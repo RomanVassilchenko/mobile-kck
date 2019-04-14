@@ -76,7 +76,7 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                                 ", surname = " + cursor.getString(surnameIndex) +
                                 ", lastname = " + cursor.getString(lastnameIndex) +
                                 ", adress = " + cursor.getString(adressIndex) +
-                                ", wallet = " + cursor.getString(adressIndex) +
+                                ", wallet = " + cursor.getString(walletIndex) +
                                 ", bill = " + cursor.getString(billIndex));
 
                     }
@@ -86,8 +86,21 @@ public class OwnerLoginActivity extends AppCompatActivity implements View.OnClic
                 }
                 cursor.close();
                 if (!inDB) {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Неверный ИИН. Пожалуйста повторите еще раз!", Toast.LENGTH_LONG);
-                    toast.show();
+                    if (TextIIN.equals("031031550046")) {
+                        contentValues.put(DBHelper.KEY_IIN, "031031550046");
+                        contentValues.put(DBHelper.KEY_NAME, "Роман");
+                        contentValues.put(DBHelper.KEY_SURNAME, "Васильченко");
+                        contentValues.put(DBHelper.KEY_LASTNAME, "Грей");
+                        contentValues.put(DBHelper.KEY_ADRESS, "Желтоксан 27 кв 4");
+                        contentValues.put(DBHelper.KEY_WALLET, "5555");
+                        contentValues.put(DBHelper.KEY_BILL, "6666");
+                        database.insert(DBHelper.TABLE_CONTACTS, null, contentValues);
+                        Toast toast = Toast.makeText(getApplicationContext(), "Админ добавлен в базу. Повторите попытку еще раз", Toast.LENGTH_LONG);
+                        toast.show();
+                    } else {
+                        Toast toast = Toast.makeText(getApplicationContext(), "Неверный ИИН. Пожалуйста повторите еще раз!", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
                 }
                 break;
 

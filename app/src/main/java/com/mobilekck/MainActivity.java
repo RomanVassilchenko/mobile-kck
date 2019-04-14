@@ -18,10 +18,15 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
 
     String ID, IIN, NAME, SURNAME, LASTNAME, ADRESS, FULLNAME, WALLET, BILL;
+    String ADBOARDNEWTEXT;
     DBHelper dbHelper;
 
     @Override
@@ -77,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void SearchInDB() {
         SQLiteDatabase database = dbHelper.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
         Cursor cursor = database.query(DBHelper.TABLE_CONTACTS, null, null, null, null, null, null);
 
         if (cursor.moveToFirst()) {
@@ -91,30 +95,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             int billIndex = cursor.getColumnIndex(DBHelper.KEY_BILL);
 
             do {
-                String DataIIN = (cursor.getString(iinIndex));
-                if (IIN.equals(DataIIN)) {
+                String newID, newIIN, newNAME, newSURNAME, newLASTNAME, newADRESS, newWALLET, newBILL;
+
+                newID = cursor.getString(idIndex);
+                newIIN = cursor.getString(iinIndex);
+                newNAME = cursor.getString(nameIndex);
+                newSURNAME = cursor.getString(surnameIndex);
+                newLASTNAME = cursor.getString(lastnameIndex);
+                newADRESS = cursor.getString(adressIndex);
+                newWALLET = cursor.getString(walletIndex);
+                newBILL = cursor.getString(billIndex);
+
+                if (IIN.equals(newIIN)) {
                     Log.e("DataIIN = IIN", "Found");
 
-                    ID = cursor.getString(idIndex);
-                    NAME = cursor.getString(nameIndex);
-                    SURNAME = cursor.getString(surnameIndex);
-                    LASTNAME = cursor.getString(lastnameIndex);
-                    ADRESS = cursor.getString(adressIndex);
-                    WALLET = cursor.getString(walletIndex);
-                    BILL = cursor.getString(billIndex);
-
-                    cursor.close();
-                    return;
-
+                    ID = newID;
+                    NAME = newNAME;
+                    SURNAME = newSURNAME;
+                    LASTNAME = newLASTNAME;
+                    ADRESS = newADRESS;
+                    WALLET = newWALLET;
+                    BILL = newBILL;
                 }
-                Log.d("mLog", "ID = " + cursor.getInt(idIndex) +
-                        ", iin = " + cursor.getString(iinIndex) +
-                        ", name = " + cursor.getString(nameIndex) +
-                        ", surname = " + cursor.getString(surnameIndex) +
-                        ", lastname = " + cursor.getString(lastnameIndex) +
-                        ", adress = " + cursor.getString(adressIndex) +
-                        ", wallet = " + cursor.getString(walletIndex) +
-                        ", bill = " + cursor.getString(billIndex));
+
+                //ADBOARD TEXT IIN = (DD-MM-YYYY)
+                if (newIIN.length() == 10) {
+                    String date = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
+                    ADBOARDNEWTEXT = newNAME + " " + newIIN + " " + date + "\n" +
+                            newADRESS + "\n\n" + ADBOARDNEWTEXT;
+
+                    try {
+                        Log.e("adtext", ADBOARDNEWTEXT);
+                    } catch (Exception e) {
+                        Log.e("adtext", e.toString());
+                    }
+                }
 
             }
             while (cursor.moveToNext());
@@ -122,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Log.d("mLog", "0 rows");
         }
         cursor.close();
-        return;
     }
 
     public void UpdateDB(String ID, String IIN, String NAME, String SURNAME, String LASTNAME, String ADRESS, String WALLET, String BILL) {
@@ -229,6 +243,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public String getID() {
         return ID;
+    }
+
+    public String getADBOARDNEWTEXT() {
+        return ADBOARDNEWTEXT;
     }
 
 }

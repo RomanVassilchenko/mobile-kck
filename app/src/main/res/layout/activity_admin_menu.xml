@@ -11,51 +11,51 @@
         android:id="@+id/etId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Id"></EditText>
+        android:hint="Id" />
 
     <EditText
         android:id="@+id/etIIN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="IIN"></EditText>
+        android:hint="IIN" />
 
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"></EditText>
+        android:hint="Name" />
 
     <EditText
         android:id="@+id/etSurname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Surname"></EditText>
+        android:hint="Surname" />
 
 
     <EditText
         android:id="@+id/etLastname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Lastname"></EditText>
+        android:hint="Lastname" />
 
 
     <EditText
         android:id="@+id/etAdress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Adress"></EditText>
+        android:hint="Adress" />
 
     <EditText
         android:id="@+id/etWallet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Wallet"></EditText>
+        android:hint="Wallet" />
 
     <EditText
         android:id="@+id/etBill"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Bill"></EditText>
+        android:hint="Bill" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,13 +66,13 @@
             android:id="@+id/btnUpd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update"></Button>
+            android:text="Update" />
 
         <Button
             android:id="@+id/btnDel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete"></Button>
+            android:text="Delete" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,18 +83,18 @@
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"></Button>
+            android:text="Add" />
 
         <Button
             android:id="@+id/btnRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Read"></Button>
+            android:text="Read" />
 
         <Button
             android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear"></Button>
+            android:text="Clear" />
     </LinearLayout>
 </LinearLayout>
